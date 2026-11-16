@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'Poornima002/devops-kubernetes-app'
+        DOCKER_IMAGE = 'poornima002/devops-kubernetes-app'
     }
 
     stages {
