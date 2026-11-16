@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -38,6 +37,15 @@ pipeline {
                         docker logout
                     '''
                 }
+            }
+        }
+
+        stage('Kubernetes Deploy') {
+            steps {
+                sh '''
+                    kubectl rollout restart deployment/devops-app
+                    kubectl rollout status deployment/devops-app --timeout=180s
+                '''
             }
         }
     }
