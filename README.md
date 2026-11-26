@@ -1,72 +1,40 @@
-# End-to-End DevOps Pipeline Using Kubernetes
+# End-to-End DevOps CI/CD Pipeline with Kubernetes
 
 ## Project Overview
+This project demonstrates an end-to-end CI/CD pipeline using AWS, Jenkins, GitHub, Maven, Docker, and Kubernetes.
 
-This project focuses on building and deploying a Spring Boot application using DevOps tools.
-
-I used GitHub for source code management, Jenkins to automate the CI/CD pipeline, Maven to build the application, and Docker to create the container image.
-
-The application was successfully deployed on a Kubernetes cluster hosted on AWS EC2 instances.
+The pipeline automates the application build, Docker image creation, image publishing, and Kubernetes deployment.
 
 ## Technologies Used
-
 - AWS EC2
-- Git & GitHub
 - Jenkins
+- Git and GitHub
 - Maven
-- Spring Boot
 - Docker
-- Docker Hub
 - Kubernetes
+- Java
 
 ## Project Workflow
-
-1. Developed the Spring Boot application.
-2. Pushed the application source code to GitHub.
-3. Integrated GitHub with Jenkins.
-4. Used Maven to build the application.
-5. Created a Docker image using the Dockerfile.
-6. Pushed the Docker image to Docker Hub.
-7. Deployed the application on a Kubernetes cluster running on AWS EC2.
-8. Verified the application deployment.
-
-## Jenkins Pipeline Stages
-
-The Jenkins pipeline includes the following stages:
-
-- **Checkout:** Retrieves the source code from GitHub.
-- **Build:** Builds the application using Maven.
-- **Docker Build:** Creates the Docker image.
-- **Docker Push:** Pushes the image to Docker Hub.
-- **Kubernetes Deploy:** Updates the Kubernetes deployment and checks its rollout status.
+1. Source code is maintained in GitHub.
+2. Jenkins fetches the source code.
+3. Maven builds the application.
+4. Docker builds the application image.
+5. Docker image is pushed to Docker Hub.
+6. Jenkins deploys the application to Kubernetes.
 
 ## Project Structure
+- `src/` – Application source code
+- `Dockerfile` – Docker image configuration
+- `Jenkinsfile` – CI/CD pipeline stages
+- `pom.xml` – Maven configuration
+- `k8s/` – Kubernetes configuration files (if included)
 
-```text
-end-to-end-devops-kubernetes/
-│
-├── src/
-│   └── main/
-│       └── java/
-│           └── com/devops/app/
-│
-├── Dockerfile
-├── Jenkinsfile
-├── pom.xml
-└── README.md
-```
+## Learning Outcomes
+- Understanding CI/CD pipeline implementation.
+- Application build using Maven.
+- Docker image creation and management.
+- Automating deployment using Jenkins.
+- Understanding Kubernetes deployment.
 
-## What I Learned
 
-- Managing source code using Git and GitHub.
-- Creating CI/CD pipelines using Jenkins.
-- Building Java applications using Maven.
-- Creating and managing Docker images.
-- Deploying applications using Kubernetes.
-- Working with AWS EC2 instances.
 
-## Project Outcome
-
-Successfully implemented an end-to-end CI/CD pipeline and deployed a Spring Boot application using Jenkins, Docker and Kubernetes on AWS EC2.
-
-This project helped me gain practical experience in CI/CD automation, containerization and application deployment.
